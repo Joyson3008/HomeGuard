@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1118">
+  <title>KuttyS.py — Local Monitor</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/camera-config.js" defer></script>
+  <script src="js/camera-manager.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="HomeGuard home">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M16 3 4 8v8c0 7.2 4.8 11.6 12 14 7.2-2.4 12-6.8 12-14V8L16 3Z"/><path d="M11 16h10M16 11v10"/></svg></span>
+        <span>KuttyS.py<span class="brand-sub">LOCAL SECURITY</span></span>
+      </a>
+      <div class="topbar-right">
+        <div class="network-chip"><span class="pulse-dot"></span><span>LOCAL NETWORK</span><span class="network-detail">OFFLINE READY</span></div>
+        <div class="header-divider"></div>
+        <div class="clock"><span id="clock-time">--:--:--</span><span id="clock-date">---</span></div>
+      </div>
+    </header>
+
+    <main>
+      <section class="intro">
+        <div>
+          <div class="eyebrow"><span class="eyebrow-line"></span> SECURITY OVERVIEW</div>
+          <h1>Live monitoring<span class="title-period">.</span></h1>
+          <p class="subtitle">Your cameras, on your network. No internet required.</p>
+        </div>
+        <div class="camera-count"><span class="count-number" id="connected-count">0</span><span class="count-copy">CAMERAS<br>CONNECTED</span></div>
+      </section>
+
+      <section class="camera-grid" id="camera-grid" aria-label="Camera feeds"></section>
+      <p class="privacy-note"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.5 2.5 4v3.7c0 3.3 2.2 5.3 5.5 6.8 3.3-1.5 5.5-3.5 5.5-6.8V4L8 1.5Z"/><path d="m5.6 7.8 1.5 1.5 3.3-3.4"/></svg><span>VIDEO STAYS ON YOUR LOCAL NETWORK</span><span class="privacy-separator">·</span><span>NO CLOUD CONNECTION</span></p>
+    </main>
+
+    <footer><span>HOMEGUARD <span class="footer-muted">OFFLINE MONITORING</span></span><span class="version">PROTOTYPE 2 <i>•</i> v0.2.0</span></footer>
+  </div>
+</body>
+</html>
