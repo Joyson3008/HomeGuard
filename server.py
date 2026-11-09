@@ -11,8 +11,8 @@ RECORDINGS = DATA / "recordings"
 AUTH_FILE = DATA / "auth.json"
 CAMERAS_FILE = DATA / "cameras.json"
 RETENTION_SECONDS = 2 * 24 * 60 * 60
-# Temporary integration-test interval. Restore to 180 for normal operation.
-SEGMENT_MINUTES = 3
+# Normal recording interval: three hours per segment.
+SEGMENT_MINUTES = 180
 SEGMENT_SECONDS = SEGMENT_MINUTES * 60
 MEGA_REMOTE_DIR = "/Root/HomeGuard"
 MEGA_MAX_BYTES = 6_000_000_000
