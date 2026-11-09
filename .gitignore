@@ -1,0 +1,29 @@
+# Android
+.gradle/
+build/
+*/build/
+local.properties
+*.jks
+*.keystore
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+__pycache__/
+data/auth.json
+data/cameras.json
+data/recordings/
+data/mega-upload-index.json
+
+# OS
+.DS_Store
+Thumbs.db

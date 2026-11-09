@@ -53,5 +53,12 @@ window.HomeGuardCameraManager = (() => {
 
   function refresh(id) { const slot = slots.get(id); if (slot) { slot.retry = 0; connect(slot); } }
   function setUrl(id, url) { const slot = slots.get(id); if (slot) { slot.camera.streamUrl = url; slot.retry = 0; connect(slot); } }
-  return { start, refresh, setUrl };
+  function remove(id) {
+    const slot = slots.get(id);
+    if (!slot) return;
+    slot.stopped = true; clearTimeout(slot.timer); clearTimeout(slot.timeout);
+    slot.elements.image.onload = null; slot.elements.image.onerror = null;
+    slot.elements.image.removeAttribute("src"); slots.delete(id);
+  }
+  return { start, refresh, setUrl, remove };
 })();

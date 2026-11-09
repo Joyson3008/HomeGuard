@@ -35,10 +35,21 @@
       </section>
 
       <section class="camera-grid" id="camera-grid" aria-label="Camera feeds"></section>
+      <section class="device-panel" aria-labelledby="device-title">
+        <div><div class="eyebrow"><span class="eyebrow-line"></span> DEVICE MANAGEMENT</div><h2 id="device-title">Add a camera</h2><p class="device-help">Enter the camera name and its local IP address. IP Webcam uses port 8080 and the /video stream path by default.</p></div>
+        <form id="add-camera-form" class="device-form">
+          <label>Camera name<input name="name" required maxlength="40" placeholder="Hallway"></label>
+          <label>Local IP address<input name="ip" required inputmode="decimal" placeholder="192.168.137.100"></label>
+          <label>Port<input name="port" inputmode="numeric" value="8080" required></label>
+          <button type="submit" class="connect-button">ADD CAMERA</button>
+        </form>
+        <p id="device-message" class="device-message" role="status"></p>
+        <p id="upload-status" class="upload-status" role="status">Checking recording and upload status…</p>
+      </section>
       <p class="privacy-note"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.5 2.5 4v3.7c0 3.3 2.2 5.3 5.5 6.8 3.3-1.5 5.5-3.5 5.5-6.8V4L8 1.5Z"/><path d="m5.6 7.8 1.5 1.5 3.3-3.4"/></svg><span>VIDEO STAYS ON YOUR LOCAL NETWORK</span><span class="privacy-separator">·</span><span>NO CLOUD CONNECTION</span></p>
     </main>
 
-    <footer><span>HOMEGUARD <span class="footer-muted">OFFLINE MONITORING</span></span><span class="version">PROTOTYPE 2 <i>•</i> v0.2.0</span></footer>
+    <footer><span>HOMEGUARD <span class="footer-muted">OFFLINE MONITORING</span></span><span class="version"><a href="/api/logout">SIGN OUT</a> &nbsp; PROTOTYPE 2 <i>•</i> v0.2.0</span></footer>
   </div>
 </body>
 </html>
